@@ -30,13 +30,13 @@ https://templatemo.com/tm-520-highway
 
     <nav>
         <div class="logo">
-            <a href="index.html"><img src="/img/logo.png"><sub>独自</sub><p></p></a>
+            <a href="{{ path('inicio') }}"><img src="/img/logo.png"><sub>独自</sub><p></p></a>
         </div>
         <div class="username" align="center">
           <h4>Usuario</h4>
         </div>
         <div class="login">
-          <a href="login.html"><img src="/img/login.png"width="40px"></a>
+          <a href="{{ path('login') }}"><img src="/img/login.png"width="40px"></a>
         </div>
         <div class="menu-icon">
         <span></span>
@@ -75,9 +75,7 @@ https://templatemo.com/tm-520-highway
     <footer>
         <div class="container-fluid">
             <div class="col-md-12">
-                <p>Copyright &copy; 2020 Company Name 
-    
-    | Designed by Carlos Tamarit Martínez</p>
+                <p>Copyright &copy; 2020 Highway | Designed by Carlos Tamarit Martínez</p>
             </div>
         </div>
     </footer>
@@ -137,22 +135,23 @@ https://templatemo.com/tm-520-highway
           <div class="main-menu">
               <ul>
                   <li>
-                      <a href="index.html">Inicio</a>
+                      <a href="{{ path('productos') }}">Outfit 1</a>
                   </li>
                   <li>
-                      <a href="masonry.html">Home - Masonry</a>
+                      <a href="{{ path('productos2') }}">Outfit 2</a>
                   </li>
                   <li>
-                      <a href="grid.html">Productos</a>
+                      <a href="{{ path('productos3') }}">Outfit 3</a>
+                  </li>
+                  <hr>
+                  <li>
+                      <a href="{{ path('nosotros') }}">Sobre nosotros</a>
                   </li>
                   <li>
-                      <a href="about.html">About Us</a>
+                      <a href="{{ path('servicios') }}">Servicios</a>
                   </li>
                   <li>
-                      <a href="blog.html">Blog Entries</a>
-                  </li>
-                  <li>
-                      <a href="single-post.html">Single Post</a>
+                      <a href="{{ path('contacta') }}">Contacto</a>
                   </li>
               </ul>
               <p>Para personas con estilo propio</p>

@@ -14,7 +14,14 @@ class InicioController extends AbstractController
     public function index(): Response
     {
         return $this->render('index.html.twig', [
-            'controller_name' => 'InicioController',
+            'loginpage'=>$this->generateUrl('login'),
+            'indexpage'=>$this->generateUrl('inicio'),
+            'aboutpage'=>$this->generateUrl('nosotros'),
+            'productpage'=>$this->generateUrl('productos'),
+            'product2page'=>$this->generateUrl('productos2'),
+            'product3page'=>$this->generateUrl('productos3'),
+            'contactapage'=>$this->generateUrl('contacta'),
+            'servicespage'=>$this->generateUrl('servicios'),
         ]);
     }
 }
