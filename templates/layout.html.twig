@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+    {% block nav %}
+        <nav>
+            <div class="logo">
+                <a href="{{ path('inicio') }}"><img src="/img/logo.png"><sub>独自</sub><p></p></a>
+            </div>
+            <div class="username" align="center">
+            <h4>{{ usuario }}</h4>
+            </div>
+            <div class="login">
+            <a href="{{ path('login') }}"><img src="/img/login.png"width="40px"></a>
+            </div>
+            <div class="menu-icon">
+            <span></span>
+            </div>
+        </nav>
+    {% endblock %}
+    {% block menu %}
+            <section class="overlay-menu">
+            <div class="container">
+                <div class="row">
+                <div class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="{{ path('productos') }}">Outfit 1</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('productos2') }}">Outfit 2</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('productos3') }}">Outfit 3</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a href="{{ path('nosotros') }}">Sobre nosotros</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('servicios') }}">Servicios</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('contacta') }}">Contacto</a>
+                        </li>
+                    </ul>
+                    <p>Para personas con estilo propio</p>
+                </div>
+                </div>
+            </div>
+            </section>
+    {% endblock %}
+    {% block footer %}
+        <footer>
+            <div class="container-fluid">
+                <div class="col-md-12">
+                    <p>Copyright &copy; Highway | Designed by Carlos Tamarit Martínez</p>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}

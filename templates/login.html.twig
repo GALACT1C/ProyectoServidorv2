@@ -1,57 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title>Highway - Free CSS Template</title>
-<!-- 
-
-Highway Template
-
-https://templatemo.com/tm-520-highway
-
--->
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
-        <link rel="stylesheet" href="/css/bootstrap.min.css">
-        <link rel="stylesheet" href="/css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="/css/fontAwesome.css">
-        <link rel="stylesheet" href="/css/light-box.css">
-        <link rel="stylesheet" href="/css/templatemo-style.css">
-
-        <link href="https://fonts.googleapis.com/css?family=Kanit:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-
-        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    </head>
-
-<body>
-
-    <nav>
-        <div class="logo">
-            <a href="{{ path('inicio') }}"><img src="/img/logo.png"><sub>独自</sub><p></p></a>
-        </div>
-        <div class="username" align="center">
-          <h4>Usuario</h4>
-        </div>
-        <div class="login">
-          <a href="{{ path('login') }}"><img src="/img/login.png"width="40px"></a>
-        </div>
-        <div class="menu-icon">
-        <span></span>
-      </div>
-    </nav>
-
+{% extends 'layout.html.twig' %}
+{% block content %}
     <div id="video-container">
         <div class="video-overlay"></div>
         <div class="video-content" style="display: flex; justify-content: center; align-items: center;">
             <div class="form-style-5">
-                <form>
+                <form action="/recibelogin" method="post">
                 <h1 align="center" style="color:white">INICIA SESIÓN</h1>
                 <fieldset>
-                <input type="text" name="field1" placeholder="Usuario *">
-                <input type="email" name="field2" placeholder="Contraseña *">  
+                <input type="text" name="usuario" placeholder="Usuario *">
+                <input type="text" name="correo" placeholder="Contraseña *">  
                 </fieldset>
                 <input type="submit" value="LOGIN" />
                 </form>
@@ -71,95 +28,6 @@ https://templatemo.com/tm-520-highway
         </div>
     </div>
 
-
-    <footer>
-        <div class="container-fluid">
-            <div class="col-md-12">
-                <p>Copyright &copy; 2020 Highway | Designed by Carlos Tamarit Martínez</p>
-            </div>
-        </div>
-    </footer>
-
-
-      <!-- Modal button -->
-    <div class="popup-icon">
-      <button id="modBtn" class="modal-btn"><img src="/img/contact-icon.png" alt=""></button>
-    </div>  
-
-    <!-- Modal -->
-    <div id="modal" class="modal">
-      <!-- Modal Content -->
-      <div class="modal-content">
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h3 class="header-title">Contacta con <em>Highway</em></h3>
-          <div class="close-btn"><img src="/img/close_contact.png" alt=""></div>    
-        </div>
-        <!-- Modal Body -->
-        <div class="modal-body">
-          <div class="col-md-6 col-md-offset-3">
-            <form id="contact" action="" method="post">
-                <div class="row">
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Tu nombre..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input name="email" type="email" class="form-control" id="email" placeholder="Tu email..." required="">
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Tu mensaje..." required=""></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="btn">Enviar</button>
-                      </fieldset>
-                    </div>
-                </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    
-
-    <section class="overlay-menu">
-      <div class="container">
-        <div class="row">
-          <div class="main-menu">
-              <ul>
-                  <li>
-                      <a href="{{ path('productos') }}">Outfit 1</a>
-                  </li>
-                  <li>
-                      <a href="{{ path('productos2') }}">Outfit 2</a>
-                  </li>
-                  <li>
-                      <a href="{{ path('productos3') }}">Outfit 3</a>
-                  </li>
-                  <hr>
-                  <li>
-                      <a href="{{ path('nosotros') }}">Sobre nosotros</a>
-                  </li>
-                  <li>
-                      <a href="{{ path('servicios') }}">Servicios</a>
-                  </li>
-                  <li>
-                      <a href="{{ path('contacta') }}">Contacto</a>
-                  </li>
-              </ul>
-              <p>Para personas con estilo propio</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
@@ -167,7 +35,4 @@ https://templatemo.com/tm-520-highway
     
     <script src="/js/plugins.js"></script>
     <script src="/js/main.js"></script>
-
-    
-</body>
-</html>
+{% endblock %}
